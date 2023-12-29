@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function BookEdit ({ book, onEdit, onSubmit }){
+function BookEdit ({ book, onSubmit }){
     const [title, setTitle] = useState(book.title);
 
     // even handler for whenever a change occurs in input tag
@@ -12,8 +12,7 @@ function BookEdit ({ book, onEdit, onSubmit }){
     const handleSubmit = (event) => {
         event.preventDefault();
         // console.log('New Title is: ', title)
-        onEdit(book.id, title);
-        onSubmit();
+        onSubmit(book.id, title);
     };
 
     return (
