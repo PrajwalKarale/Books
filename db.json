@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "title": " Book1",
+      "title": " Book1.1",
       "id": 1
     },
     {
@@ -19,10 +19,6 @@
     {
       "title": " Book5",
       "id": 5
-    },
-    {
-      "title": " Book6",
-      "id": 6
     }
   ]
 }
