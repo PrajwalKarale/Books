@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import BooksContext from "../context/books";
 
-function BookCreate ({ onCreateBook }) {
+function BookCreate () {
     const [title, setTitle] = useState(' ');
-
+    const { handleCreateBook } = useContext(BooksContext);
     const handleChange = (event) => {
         setTitle(event.target.value);
     };
     const handleSubmit = (event) => {
         // This event action prevents reloading of screen everytime we submit
         event.preventDefault();
-        onCreateBook(title);
+        handleCreateBook(title);
         setTitle(' ');
     }
     return (
